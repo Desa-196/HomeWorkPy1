@@ -8,3 +8,23 @@
 385916 -> yes
 123456 -> no
 '''
+ticketNumber = 0
+
+while(True):
+    try:
+        ticketNumber = int(input("Введите номер билета (6 цифр):"))
+    except:
+        print('Введено не число!')
+        continue
+
+    ticketNumber = str(ticketNumber)
+    if len(ticketNumber) == 6:
+        break
+    else:
+        print('Номер билета должен содержать 6 цифр!')
+
+if int(ticketNumber[0]) + int(ticketNumber[1]) + int(ticketNumber[2]) == +\
+    int(ticketNumber[3]) + int(ticketNumber[4]) + int(ticketNumber[5]):
+    print('Yes')
+else:
+    print('No')
